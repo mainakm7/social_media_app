@@ -11,7 +11,7 @@ from jose import jwt, JWTError
 from datetime import timedelta, datetime
 import json
 
-with open(r".\social_media_app\secrets.json", "r") as f:
+with open(r".\secrets.json", "r") as f:
     secrets = json.load(f)
 
 

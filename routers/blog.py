@@ -40,9 +40,13 @@ async def post_blog(user: user_dependency, db: db_dependency, blog: NewBlog):
     db.add(new_blog)
     db.commit()
 
+@router.get("/own", status_code=status.HTTP_200_OK)
+async def get_all_userblog(user: user_dependency, db: db_dependency):
+    return db.query(UserBlog).filter(UserBlog.owner_id==user.get("id")).all()
+
 @router.get("/all", status_code=status.HTTP_200_OK)
 async def get_all_blog(user: user_dependency, db: db_dependency):
-    return db.query(UserBlog).filter(UserBlog.owner_id==user.get("id")).all()
+    return db.query(UserBlog).all()
 
 
 @router.get("/{blogid}", status_code=status.HTTP_200_OK)

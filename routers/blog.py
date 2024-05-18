@@ -61,7 +61,7 @@ async def get_blog_byid(user: user_dependency, db: db_dependency, blogid: int = 
         raise HTTPException(status_code=404, detail="Data not Found")
 
 
-@router.delete("/delete/{blogid}", status_code=status.HTTP_200_OK)
+@router.delete("/delete/{blogid}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_blog(user: user_dependency, db: db_dependency, blogid: int = Path(ge=1)):
     blog_data = db.query(UserBlog).filter(UserBlog.owner_id == user.get("id"), UserBlog.id == blogid).first()
     if not blog_data:

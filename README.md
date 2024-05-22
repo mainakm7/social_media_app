@@ -1,7 +1,7 @@
 # social_media_app (In development)
 
 ## Description
-social_media_app is an application designed for users to blog their thoughts and post pictures. It utilizes a SQL database to store blogged items and incorporates user authentication features. Users can create a profile, log in securely, and then add, or delete their blogs within the app. Any user can currently read all blogs by anyone. Their is an admin superuser to regulate user activity. The application provides REST APIs for performing CRUD (Create, Read, Update, Delete) operations on the to-do items, making it easy to integrate with other systems or extend its functionality.
+social_media_app is an application designed for users to blog their thoughts and post pictures. It utilizes a SQL database to store blogged items and incorporates user authentication features. Users can create a profile, log in securely, and then add, or delete their blogs within the app. Any user can currently read all blogs by anyone. Their is an admin superuser to regulate user activity. The application provides REST APIs for performing CRUD (Create, Read, Update, Delete) operations on the blog items, making it easy to integrate with other systems or extend its functionality.
 
 ## Features
 - User authentication system: Allows users to create accounts and securely log in.
